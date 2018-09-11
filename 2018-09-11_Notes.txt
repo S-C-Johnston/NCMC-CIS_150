@@ -1,0 +1,85 @@
+##File management
+
+###Hierarcy of data
+
+Bits: Binary digits. 1s and 0s
+Characters: Individual alphanumeric pieces of data.
+Data Field: A consistent categorized box in which data is kept.
+Record: A group of fields which are associated as one unit
+File/Table: A group of records listed as a group.
+Database: A collection of all tables/files of the organization.
+
+###Procedures in data management
+
+File/table creation
+Record creation, editing, querying, deletion and reporting
+Indexing
+
+####Secondary Storage Devices Classification
+
+By function:
+ 1. Sequential: used primarily for batch processing and backup
+ 2. Random access (DASD): used for online processing
+
+Magnetic disks tend to support random access, but often require a file table to
+do this.
+
+Tapes and optical discs typically rely on sequential access and storage.
+Tape Archive (.tar) filetype was built to support this kind of contiguous
+concatenation and storage.
+
+####Procedures for Sequential (batch) processing
+
+ 1. The Master file contains data from previous cycle. Data is stored
+sequentially, sorted by the record key.
+ 2. Transactions are accumulated on a Transaction file in the random order they
+arrive.
+ 3. Periodically, the Transactions file is sorted by the key and merged with
+the Master file to create a new Master file.
+
+Data redundancy is a bad thing. The same record should be accessed and edited
+in one place.
+
+<...> Section 2-3 of Module 2: Unit 1 Lecture
+
+###Database models
+
+Hierarchical database structure resembles a tree, each node having a parent,
+excepting the uppermost node. The structure resembles a very basic file
+system in some senses. Each child or node can only have one direct parent,
+however.
+
+Network database structure is similar to a hierarchical model. Instead of
+single-parent trees, the network model uses set theory. In it, child tables
+can have more than one parent. This allows the network model to support many
+relationships.
+
+The relational model allows for organization and access according to the
+relationships, plural, between records without the consideration of physical
+orientation and relationship between tables.
+
+##Three schema architecture
+
+ 1. Internal schema: Describes the physical storage structure of the database.
+The internal schema uses a physical data model. It describes the complete
+details of data storage.
+
+ 2. Conceptual schema: Describes the structure of the whole database, while
+obscuring the exact details of physical storage. It focuses on entities, data
+types, relationships, and constraints.
+
+ 3. External schema: Each individual external schema describes the part of the
+database that the user wants to see and obscures the rest.
+
+###Data independence
+
+ - Physical data independence
+	* The ability to modify the physical scheme without causing
+	  applications to be rewritten.
+	* Modifications at this level are usually to improve performance.
+ - Logical data independence
+	* The ability to modify the conceptual scheme without causing
+	  application programs to be rewritten.
+	* Usually done when logical structure of database is altered.
+
+See ./Relational_Databases.txt

@@ -1,0 +1,19 @@
+Before databases there were: 
+- Filing cabinets
+- Monolithic files
+etc.
+
+Hierarchical databases:
+Share a tree structure. Looks similar to filesystems on PCs, for instance.
+
+Network Databases:
+Like a hierarchical structure in having a hierarchical relationships, but
+connected much more like a network of connections.
+
+Relationsal Databases:
+Store unique records with a primary key. Each record can be referenced
+in other places by its primary key. In doing so, allows for redundancy
+reduction.
+
+Object Oriented Databases:
+
