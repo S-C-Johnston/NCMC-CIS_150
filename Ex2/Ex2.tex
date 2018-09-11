@@ -1,0 +1,89 @@
+\documentclass{article}
+
+\usepackage{geometry}
+
+\title{Exercise 2}
+\author{Stewart Johnston\\
+  {CIS 150 -- Intro to Database Administration}\\
+  {NCMC}\\
+  {\texttt{johnstons1@student.ncmich.edu}}
+}
+\date
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+
+	\item Definitions:
+
+\begin{enumerate}
+	
+	\item Data: Bulk sum of all details. E.g., the customer table in totality is data.
+	\item Information: Data which has been filtered or queried in a way to
+		answer a particular question. E.g., the sum of new customers
+		since the 2017 marketing campaign.
+	\item Information Management: The process of collecting information,
+		editing records, and retrieving actionable information from
+		its means of storage. 
+	\item Database: The total collection of all organized tables.
+	\item Database System: Server software which makes accessible the
+		database files which it stores.
+	\item Database Management System: The suite of software built to
+		interact with the core system.
+	\item Database Administrator: A professional whose job pertains to the
+		planning, installation, configuration, design, security, backup
+		and data recovery involved in a DBMS. Likely to be more
+		involved in the hardware and software aspects of running a DBMS
+		than in interacting with the data itself.
+	\item Database Analyst: A professional whose job involves mainly the
+		retrieval and synthesis of data and information to be useable.
+		Likely to be more involved in interacting with the data, its
+		needs and design rather than the support of making it
+		operational.
+	\item Decision Support System: The structured support for the
+		management decisions for an organization. Software will take
+		the form of a front end to an important array of information
+		for that user.
+	\item System Effectiveness: A metric of how well the DB model is
+		handling the needs of that data and its users. Its reliability
+		and applicability. Doing the right thing.
+	\item System Efficiency: A metric of how much waste of time and effort
+		is sunk into retrieving and using data. Or rather, an inverse
+		proportion: something is efficient if it has low waste. Doing
+		something the right way, and quickly.
+	\item User View: The virtual representation of the data being queried.
+		Likely to be a client-side, temporary and volatile model. It is
+		decoupled from the normalized, structured handling of
+		information in the database itself.
+	\item Logical Schema: The properly normalized design of the data
+		representation. Defines the categories and relationships in
+		play at the center of the system.
+	\item Physical Schema: The literal physical implementation of the
+		Logical Schema. The exact datatypes which are used by the
+		database system, as well as its files, logs, etc.
+
+\end{enumerate}
+
+\item Data is and databases are an important organizational resource for several
+reasons. The ability to quickly and reliably find information relevant to daily
+operations increases productivity tremendously, rather than wasting time
+searching for information. Keeping data in a consistent,
+secure way helps to prevent loss or confusion of service to clients and end
+users.
+
+\item The main goal of a database system is to securely dispense data or information sought
+by its authorized users. A database system would not be effective if it allowed
+unauthorized users to access data they shouldn't, nor would it be effective if it failed to reliably return authorized queries.
+
+\item The three levels of the ANSI/SPARC architecture are the Physical/Internal,
+Conceptual, and External schema. The External Schema correspond to end user
+views of the data they need. The Conceptual Schema describes the information
+needs, and its design and structure. The Physical Schema is the storage of that
+information by the computer, which spans from the datatype implementation to
+the files and logs it keeps.
+
+\end{enumerate}
+
+\end{document}
