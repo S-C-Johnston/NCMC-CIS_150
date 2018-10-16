@@ -1,0 +1,77 @@
+%&tex
+\documentclass{article}
+
+\usepackage{graphicx}[draft]
+\graphicspath{{img/}}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{listings}
+
+\title{Exercise 5 -- SQL server install}
+\author{Stewart Johnston\\
+  {CIS 150 -- Intro to Database Administration}\\
+  {NCMC}\\
+  {\texttt{johnstons1@student.ncmich.edu}}
+}
+\date{\today}
+
+\begin{document}
+\maketitle
+\lstset{language=SQL}
+
+\section{SELECT four columns}
+
+\begin{lstlisting}
+SELECT ProductCode
+,ProductName
+,ListPrice
+,DiscountPercent
+FROM Products
+ORDER BY ListPrice DESC
+\end{lstlisting}\label{sec:q_1}
+See figure \ref{fig:q_1}
+
+\begin{figure}[H]\centering
+	\caption{Select four columns of the products table, per section
+	\ref{sec:q_1}}
+	\includegraphics[width=\linewidth]{img/q_1}
+	\label{fig:q_1}
+\end{figure}
+
+\section{Return FullName}
+
+\begin{lstlisting}
+SELECT LastName + ', ' + FirstName AS FullName
+FROM Customers
+ORDER BY LastName
+\end{lstlisting}\label{sec:q_2}
+See figure \ref{fig:q_2}
+
+\begin{figure}[H]\centering
+	\caption{Summarized FullName, as per \ref{sec:q_2}}
+	\includegraphics[width=\linewidth]{q_2}
+	\label{fig:q_2}
+\end{figure}
+
+\section{Select name, listprice, dateadded}
+
+\begin{lstlisting}
+SELECT ProductName
+,ListPrice
+,DateAdded
+FROM Products
+WHERE ListPrice BETWEEN 500 AND 2000
+ORDER BY DateAdded DESC
+\end{lstlisting}\label{sec:q_3}
+See figure \ref{fig:q_3}
+
+\begin{figure}[H]\centering
+	\caption{Returns Name, Price, and Date, per \ref{sec:q_3}}
+	\includegraphics[width=\linewidth]{q_3}
+	\label{fig:q_3}
+\end{figure}
+
+
+\end{document}
