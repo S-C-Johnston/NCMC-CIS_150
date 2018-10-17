@@ -77,5 +77,68 @@ See figure \ref{fig:q_3}
 	\label{fig:q_3}
 \end{figure}
 
+\section{Return Name, Price, Discount, etc}
+
+\begin{lstlisting}
+SELECT ProductName
+,ListPrice
+,DiscountPercent
+,ListPrice * (DiscountPercent / 100 ) AS DiscountAmount
+,ListPrice - ListPrice * (DiscountPercent / 100 ) AS DiscountPrice /*Because
+aliases aren't reusable in the same scope, much to my annoyance, and we haven't
+learned subqueries or CTEs yet.*/
+FROM Products
+ORDER BY DiscountPrice DESC
+\end{lstlisting}\label{sec:q_4}
+See figure \ref{fig:q_4}
+
+\begin{figure}[H]\centering
+	\caption{Per \ref{sec:q_4}, return Name, Price, and Discount, ordered
+	by DiscountPrice}
+	\includegraphics[width=\linewidth]{q_4}
+	\label{fig:q_4}
+\end{figure}
+
+\section{Return Item ID, Price, Discount, etc from OrderItems}
+
+\begin{lstlisting}
+SELECT ItemID
+,ItemPrice
+,DiscountAmount
+,Quantity
+,ItemPrice * Quantity AS PriceTotal
+,DiscountAmount * Quantity AS DiscountTotal
+,(ItemPrice - DiscountAmount) * Quantity AS ItemTotal
+FROM OrderItems
+WHERE ((ItemPrice - DiscountAmount) * Quantity) > 500 /*Again, no subqueries
+yet. Kind of dumb that this is how it works by default, because otherwise, I'd
+happily use ItemTotal*/
+ORDER BY ItemTotal DESC
+\end{lstlisting}\label{sec:q_5}
+See figure \ref{fig:q_5}
+
+\begin{figure}[H]\centering
+	\caption{Per \ref{sec:q_5}, return ID, Price, etc from OrderItems}
+	\includegraphics[width=\linewidth]{q_5}
+	\label{fig:q_5}
+\end{figure}
+
+\section{Return attributes where one is null}
+
+\begin{lstlisting}
+SELECT OrderID
+,OrderDate
+,ShipDate
+FROM Orders
+WHERE ShipDate is null
+\end{lstlisting}\label{sec:q_6}
+See figure \ref{fig:q_6}
+
+\begin{figure}[H]\centering
+	\caption{Per \ref{sec:q_6}, return ID, Dates, from Orders, where
+	ShipDate is null}
+	\includegraphics[width=\linewidth]{q_6}
+	\label{fig:q_6}
+\end{figure}
 
 \end{document}
