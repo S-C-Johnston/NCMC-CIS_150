@@ -141,4 +141,21 @@ See figure \ref{fig:q_6}
 	\label{fig:q_6}
 \end{figure}
 
+\section{SELECT without FROM}
+
+\begin{lstlisting}
+SELECT 100 AS Price
+,0.07 AS TaxRate
+,100 * 0.07 AS TaxAmount /*Eww, magic numbers*/
+,100 + (100 * 0.07) AS Total /*Why is SQL gross?*/
+\end{lstlisting}\label{sec:q_7}
+See figure \ref{fig:q_7}
+
+\begin{figure}[H]\centering
+	\caption{Per \ref{sec:q_7}, SELECT custom values into columns w/o a
+	FROM clause}
+	\includegraphics[width=\linewidth]{q_7}
+	\label{fig:q_7}
+\end{figure}
+
 \end{document}
