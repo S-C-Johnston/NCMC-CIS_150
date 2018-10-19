@@ -2,7 +2,8 @@
 \documentclass{article}
 
 \usepackage{graphicx}[draft]
-\graphicspath{{img/}}
+\usepackage{color}
+\graphicspath{{./img/}}
 \usepackage{geometry}
 \usepackage{hyperref}
 \usepackage{subcaption}
@@ -18,7 +19,10 @@
 \date{\today}
 
 \begin{document}
-\lstset{language=SQL}
+\lstset{language=SQL,
+	basicstyle=\ttfamily,
+	keywordstyle=\color{black}\bfseries\underbar,
+	floatplacement=tbph}
 
 \maketitle
 
@@ -27,7 +31,7 @@
 
 \section{SELECT four columns}
 
-\begin{lstlisting}
+\begin{lstlisting}[float]
 SELECT ProductCode
 ,ProductName
 ,ListPrice
@@ -46,7 +50,7 @@ See figure \ref{fig:q_1}
 
 \section{Return FullName}
 
-\begin{lstlisting}
+\begin{lstlisting}[float]
 SELECT LastName + ', ' + FirstName AS FullName
 FROM Customers
 ORDER BY LastName
@@ -61,7 +65,7 @@ See figure \ref{fig:q_2}
 
 \section{Select name, listprice, dateadded}
 
-\begin{lstlisting}
+\begin{lstlisting}[float]
 SELECT ProductName
 ,ListPrice
 ,DateAdded
@@ -79,7 +83,7 @@ See figure \ref{fig:q_3}
 
 \section{Return Name, Price, Discount, etc}
 
-\begin{lstlisting}
+\begin{lstlisting}[float]
 SELECT ProductName
 ,ListPrice
 ,DiscountPercent
@@ -101,7 +105,7 @@ See figure \ref{fig:q_4}
 
 \section{Return Item ID, Price, Discount, etc from OrderItems}
 
-\begin{lstlisting}
+\begin{lstlisting}[float]
 SELECT ItemID
 ,ItemPrice
 ,DiscountAmount
@@ -125,7 +129,7 @@ See figure \ref{fig:q_5}
 
 \section{Return attributes where one is null}
 
-\begin{lstlisting}
+\begin{lstlisting}[float]
 SELECT OrderID
 ,OrderDate
 ,ShipDate
@@ -143,7 +147,7 @@ See figure \ref{fig:q_6}
 
 \section{SELECT without FROM}
 
-\begin{lstlisting}
+\begin{lstlisting}[float]
 SELECT 100 AS Price
 ,0.07 AS TaxRate
 ,100 * 0.07 AS TaxAmount /*Eww, magic numbers*/
