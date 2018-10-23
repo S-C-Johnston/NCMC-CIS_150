@@ -1,0 +1,58 @@
+%&tex
+\documentclass{article}
+
+\usepackage{graphicx}[draft]
+\usepackage{color}
+\graphicspath{{./img/}}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{listings}
+
+\title{Exercise 8 -- Data Definition Language}
+\author{Stewart Johnston\\
+  {CIS 150 -- Intro to Database Administration}\\
+  {NCMC}\\
+  {\texttt{johnstons1@student.ncmich.edu}}
+}
+\date{\today}
+
+\begin{document}
+\lstset{language=SQL,
+	basicstyle=\ttfamily,
+	keywordstyle=\color{black}\bfseries\underbar,
+	floatplacement=tbph}
+
+\maketitle
+
+\tableofcontents
+\listoffigures
+
+\section{Add an index to the MyGuitarShop for zip code}
+
+See figure \ref{fig:q_1}
+\label{sec:q_1}
+\begin{lstinputlisting}[float]{src/q_1.sql}
+\end{lstinputlisting}
+
+\begin{figure}[H]\centering
+	\caption{Per \ref{sec:q_1}}
+	\includegraphics[width=\linewidth]{q_1}
+	\label{fig:q_1}
+\end{figure}
+
+\section{Implement a design on a database}
+
+See figure \ref{fig:q_2}
+\label{sec:q_2}
+\begin{lstinputlisting}[float]{src/q_2.sql}
+\end{lstinputlisting}
+
+\begin{figure}[H]\centering
+	\caption{Per \ref{sec:q_2}}
+	\includegraphics[width=\linewidth]{q_2}
+	\label{fig:q_2}
+\end{figure}
+
+\end{document}
