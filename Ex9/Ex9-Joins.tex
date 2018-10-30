@@ -1,0 +1,116 @@
+%&tex
+\documentclass{article}
+
+\usepackage{graphicx}[draft]
+\usepackage{color}
+\graphicspath{{./img/}}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{listings}
+
+\title{Exercise 9 -- Joins for MyGuitarShop}
+\author{Stewart Johnston\\
+  {CIS 150 -- Intro to Database Administration}\\
+  {NCMC}\\
+  {\texttt{johnstons1@student.ncmich.edu}}
+}
+\date{\today}
+
+\begin{document}
+\lstset{language=SQL,
+	basicstyle=\ttfamily,
+	keywordstyle=\color{black}\bfseries\underbar,
+	floatplacement=tbph}
+
+\maketitle
+
+\tableofcontents
+\listoffigures
+
+\section{Select CategoryName, ProductName, ListPrice}
+See figure \ref{fig:q_1}
+\label{sec:q_1}
+\begin{lstinputlisting}[float]{src/q_1.sql}
+\end{lstinputlisting}
+\begin{figure}[H]\centering
+	\caption{Per \ref{sec:q_1}}
+	\includegraphics[width=\linewidth]{q_1}
+	\label{fig:q_1}
+\end{figure}
+
+\section{Get Allan Sherwood's information}
+See figure \ref{fig:q_2}
+\label{sec:q_2}
+\begin{lstinputlisting}[float]{src/q_2.sql}
+\end{lstinputlisting}
+\begin{figure}[H]\centering
+	\caption{Per \ref{sec:q_2}}
+	\includegraphics[width=\linewidth]{q_2}
+	\label{fig:q_2}
+\end{figure}
+
+\section{Get shipping addresses}
+See figure \ref{fig:q_3}
+\label{sec:q_3}
+\begin{lstinputlisting}[float]{src/q_3.sql}
+\end{lstinputlisting}
+\begin{figure}[H]\centering
+	\caption{Per \ref{sec:q_3}}
+	\includegraphics[width=\linewidth]{q_3}
+	\label{fig:q_3}
+\end{figure}
+
+\section{Summarize orders with aliases}
+Sorted by LastName, OrderDate, and ProductName
+See figure \ref{fig:q_4}
+\label{sec:q_4}
+\begin{lstinputlisting}[float]{src/q_4.sql}
+\end{lstinputlisting}
+\begin{figure}[H]\centering
+	\caption{Per \ref{sec:q_4}}
+	\includegraphics[width=\linewidth]{q_4}
+	\label{fig:q_4}
+\end{figure}
+%
+%\section{<>}
+%
+%See figure \ref{fig:<>}
+%\label{sec:<>}
+%\begin{lstinputlisting}[float]{src/<>.sql}
+%\end{lstinputlisting}
+%
+%\begin{figure}[H]\centering
+%	\caption{Per \ref{sec:<>}}
+%	\includegraphics[width=\linewidth]{<>}
+%	\label{fig:<>}
+%\end{figure}
+%
+%\section{<>}
+%
+%See figure \ref{fig:<>}
+%\label{sec:<>}
+%\begin{lstinputlisting}[float]{src/<>.sql}
+%\end{lstinputlisting}
+%
+%\begin{figure}[H]\centering
+%	\caption{Per \ref{sec:<>}}
+%	\includegraphics[width=\linewidth]{<>}
+%	\label{fig:<>}
+%\end{figure}
+%
+%\section{<>}
+%
+%See figure \ref{fig:<>}
+%\label{sec:<>}
+%\begin{lstinputlisting}[float]{src/<>.sql}
+%\end{lstinputlisting}
+%
+%\begin{figure}[H]\centering
+%	\caption{Per \ref{sec:<>}}
+%	\includegraphics[width=\linewidth]{<>}
+%	\label{fig:<>}
+%\end{figure}
+%
+\end{document}
