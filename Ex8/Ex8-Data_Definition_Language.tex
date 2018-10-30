@@ -55,4 +55,72 @@ See figure \ref{fig:q_2}
 	\label{fig:q_2}
 \end{figure}
 
+\section{Add rows to database}
+
+See figure \ref{fig:q_3}
+\label{sec:q_3}
+\begin{lstinputlisting}[float]{src/q_3.sql}
+\end{lstinputlisting}
+
+\begin{figure}[H]\centering
+	\caption{Per \ref{sec:q_3}}
+	\includegraphics[width=\linewidth]{q_3}
+	\label{fig:q_3}
+\end{figure}
+
+\section{Alter Products table}
+
+See figure \ref{fig:q_4}
+\label{sec:q_4}
+\begin{lstinputlisting}[float]{src/q_4.sql}
+\end{lstinputlisting}
+
+\begin{figure}[H]\centering
+	\caption{Per \ref{sec:q_4}}
+	\includegraphics[width=\linewidth]{q_4}
+	\label{fig:q_4}
+\end{figure}
+
+\section{Alter FirstName column in Users}
+
+See figure \ref{fig:q_5}
+\label{sec:q_5}
+\begin{lstinputlisting}[float]{src/q_5.sql}
+\end{lstinputlisting}
+
+\begin{figure}[H]\centering
+	\caption{Per \ref{sec:q_5}}
+	\includegraphics[width=\linewidth]{q_5}
+	\label{fig:q_5}
+\end{figure}
+
+\subsection{Failed update command for Users}
+In which we attempt to update with a NULL in a value which is not allowed to be null
+
+See figure \ref{fig:q_5-1}
+\label{sec:q_5-1}
+\begin{lstinputlisting}[float]{src/q_5-1.sql}
+\end{lstinputlisting}
+
+\begin{figure}[H]\centering
+	\caption{Per \ref{sec:q_5-1}}
+	\includegraphics[width=\linewidth]{q_5-1}
+	\label{fig:q_5-1}
+\end{figure}
+
+\subsection{Failed update command for Users 2: electric boogaloo}
+In which we attempt to udpate with a name which is too long for the data type
+
+
+See figure \ref{fig:q_5-2}
+\label{sec:q_5-2}
+\begin{lstinputlisting}[float]{src/q_5-2.sql}
+\end{lstinputlisting}
+
+\begin{figure}[H]\centering
+	\caption{Per \ref{sec:q_5-2}}
+	\includegraphics[width=\linewidth]{q_5-2}
+	\label{fig:q_5-2}
+\end{figure}
+
 \end{document}
