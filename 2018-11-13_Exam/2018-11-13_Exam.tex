@@ -1,0 +1,147 @@
+%&tex
+\documentclass{article}
+
+\usepackage{graphicx}[draft]
+\usepackage{color}
+\graphicspath{{./img/}}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{listings}
+
+\title{Exam on 2018-11-13}
+\author{Stewart Johnston\\
+  {CIS 150 -- Intro to Database Administration}\\
+  {NCMC}\\
+  {\texttt{johnstons1@student.ncmich.edu}}
+}
+\date{\today}
+
+\setcounter{secnumdepth}{3}
+
+\begin{document}
+\lstset{language=SQL,
+	basicstyle=\ttfamily,
+	keywordstyle=\color{black}\bfseries\underbar,
+	floatplacement=tbph}
+
+\maketitle
+
+\tableofcontents
+\listoffigures
+
+\section{Short answers}
+
+	\subsection{Data independence} comes in two flavors: Physical data
+	independence and Logical data independence. The principle function of
+	data independence is to allow for changes without having to rewrite
+	applications which use the data.  Physical modifications would normally
+	be made for performance reasons, but we don't want these changes to
+	break queries. Logical changes would happen primarily when the
+	conceptual scheme is altered. These might change some constraints, but
+	shouldn't interfere with existing operations.
+
+	\subsection{Primary keys} should be both stable and unique. It is
+	important that any given row is always able to be referenced
+	unambiguously, and that the method of reference never changes. To that
+	end, primary keys should be either be made or chosen from immutable
+	data. They also cannot be null.
+
+
+	\subsection{DDL and DML} stand for Data Definition Language and Data
+	Manipulation Language, respectively. They are two of the subsets of
+	language defined for SQL. Data Definition Language has much to do with
+	the creation and alteration of tables, especially of the physical
+	data-types used for the information. Data Manipulation Langauge,
+	meanwhile, is related to retrieving and editing tuples and records. If
+	the initial database design is solid and meets the needs of the users,
+	DDL may go untouched for years. DML, on the other hand, will certainly
+	see frequent use in any living database.
+	
+		\begin{lstlisting}[float]
+		/* Data Definiton Language example */
+		CREATE TABLE Parts(
+		id	INTEGER     PRIMARY KEY,
+		name	VARCHAR(50) NOT NULL,
+		length	FLOAT       NOT NULL,
+		width	FLOAT       NOT NULL,
+		);
+		\end{lstlisting}
+
+		\begin{lstlisting}[float]
+		/* Data Manipulation Language example */
+		SELECT name, length, width
+		FROM Parts
+		WHERE length > 12;
+		\end{lstlisting}
+
+	\subsection{Foreign Keys} are the primary vehicle for describing and
+	constraining relationships in our data. They allow tuples to reference
+	other tuples, either in the same or in a different table. They provide
+	database administrators a means to keep data consistent, both in the
+	form of normalization, and in the form of referential integrity.
+	Referential integrity is a constraint for the RDBMS which tells it to
+	forbid the deletion of records which are being referenced by other
+	records, meaning that to delete a record which is referenced, one must
+	prune or re-assign all records from all tables which reference it in
+	one shot.
+
+	\subsection{``Three levels of schema'' architecture} involves an
+	external schema, conceptual schema, and internal schema. Several
+	external schema can exist for any given database, which describe how
+	users see the data. Conceptual schema describes the relationships
+	between entities in a database. The internal or physical schema describes the
+	datatypes and other physical storage requirements for the data.
+
+\section{Attaching using SSMS}
+\subsection{} Right-click on Databases, select Attach... \label{sec:q_1-1-1}
+See figure \ref{fig:q_1-1-1}
+\begin{figure}[H]\centering
+	\caption{Per \ref{sec:q_1-1-1}}
+	\includegraphics[width=\linewidth]{q_1-1-1}
+	\label{fig:q_1-1-1}
+\end{figure}
+\subsection{} In Databases to Attach, choose Add \label{sec:q_1-1-2}
+See figure \ref{fig:q_1-1-2}
+\begin{figure}[H]\centering
+	\caption{Per \ref{sec:q_1-1-2}}
+	\includegraphics[width=\linewidth]{q_1-1-2}
+	\label{fig:q_1-1-2}
+\end{figure}
+\subsection{} This opens a file explorer window for browsing, find the database file.
+\label{sec:q_1-1-3}
+See figure \ref{fig:q_1-1-3}
+\begin{figure}[H]\centering
+	\caption{Per \ref{sec:q_1-1-3}}
+	\includegraphics[width=\linewidth]{q_1-1-3}
+	\label{fig:q_1-1-3}
+\end{figure}
+\subsection{} If there is a log file with the database, it will grab that as well. Click
+OK.\label{sec:q_1-1-4}
+See figure \ref{fig:q_1-1-4}
+\begin{figure}[H]\centering
+	\caption{Per \ref{sec:q_1-1-4}}
+	\includegraphics[width=\linewidth]{q_1-1-4}
+	\label{fig:q_1-1-4}
+\end{figure}
+\subsection{} Thusly a database is attached under the master. \label{sec:q_1-1-5}
+See figure \ref{fig:q_1-1-5}
+\begin{figure}[H]\centering
+	\caption{Per \ref{sec:q_1-1-5}}
+	\includegraphics[width=\linewidth]{q_1-1-5}
+	\label{fig:q_1-1-5}
+\end{figure}
+
+\section{Attaching a database using DDL}
+See figure \ref{fig:q_1-2}
+\label{sec:q_1-2}
+\begin{lstinputlisting}[float]{src/q_1-2.sql}
+\end{lstinputlisting}
+\begin{figure}[H]\centering
+	\caption{Per \ref{sec:q_1-2}}
+	\includegraphics[width=\linewidth]{q_1-2}
+	\label{fig:q_1-2}
+\end{figure}
+
+\end{document}
