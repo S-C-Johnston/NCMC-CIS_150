@@ -94,22 +94,24 @@
 	between entities in a database. The internal or physical schema describes the
 	datatypes and other physical storage requirements for the data.
 
-\section{Attaching using SSMS}
-\subsection{} Right-click on Databases, select Attach... \label{sec:q_1-1-1}
+\section{Hands on with the server}
+
+\subsection{Attaching using SSMS}
+\subsubsection{} Right-click on Databases, select Attach... \label{sec:q_1-1-1}
 See figure \ref{fig:q_1-1-1}
 \begin{figure}[H]\centering
 	\caption{Per \ref{sec:q_1-1-1}}
 	\includegraphics[width=\linewidth]{q_1-1-1}
 	\label{fig:q_1-1-1}
 \end{figure}
-\subsection{} In Databases to Attach, choose Add \label{sec:q_1-1-2}
+\subsubsection{} In Databases to Attach, choose Add \label{sec:q_1-1-2}
 See figure \ref{fig:q_1-1-2}
 \begin{figure}[H]\centering
 	\caption{Per \ref{sec:q_1-1-2}}
 	\includegraphics[width=\linewidth]{q_1-1-2}
 	\label{fig:q_1-1-2}
 \end{figure}
-\subsection{} This opens a file explorer window for browsing, find the database file.
+\subsubsection{} This opens a file explorer window for browsing, find the database file.
 \label{sec:q_1-1-3}
 See figure \ref{fig:q_1-1-3}
 \begin{figure}[H]\centering
@@ -117,7 +119,7 @@ See figure \ref{fig:q_1-1-3}
 	\includegraphics[width=\linewidth]{q_1-1-3}
 	\label{fig:q_1-1-3}
 \end{figure}
-\subsection{} If there is a log file with the database, it will grab that as well. Click
+\subsubsection{} If there is a log file with the database, it will grab that as well. Click
 OK.\label{sec:q_1-1-4}
 See figure \ref{fig:q_1-1-4}
 \begin{figure}[H]\centering
@@ -125,7 +127,7 @@ See figure \ref{fig:q_1-1-4}
 	\includegraphics[width=\linewidth]{q_1-1-4}
 	\label{fig:q_1-1-4}
 \end{figure}
-\subsection{} Thusly a database is attached under the master. \label{sec:q_1-1-5}
+\subsubsection{} Thusly a database is attached under the master. \label{sec:q_1-1-5}
 See figure \ref{fig:q_1-1-5}
 \begin{figure}[H]\centering
 	\caption{Per \ref{sec:q_1-1-5}}
@@ -133,7 +135,7 @@ See figure \ref{fig:q_1-1-5}
 	\label{fig:q_1-1-5}
 \end{figure}
 
-\section{Attaching a database using DDL}
+\subsection{Attaching a database using DDL}
 See figure \ref{fig:q_1-2}
 \label{sec:q_1-2}
 \begin{lstinputlisting}[float]{src/q_1-2.sql}
@@ -144,7 +146,7 @@ See figure \ref{fig:q_1-2}
 	\label{fig:q_1-2}
 \end{figure}
 
-\section{Entity relationship diagram} showing Primary Keys as `PK\_', foreign
+\subsection{Entity relationship diagram} showing Primary Keys as `PK\_', foreign
 keys with cardinality as crow's foot, and other attributes as part of the
 tables. See figure \ref{fig:salesDB_erd}
 \label{sec:salesDB_erd}
