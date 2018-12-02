@@ -17,6 +17,7 @@ To lay some groundwork terms:
 1. Threat: Any action which can potentially harm the availability,
    integrity, or confidentiality of information. Need not be malicious,
 merely harmful.
+
 2. Internal threat: A threat from inside the organization. This can be
    as simple as a well-meaning user doing something foolish, or as
 complex as a disgruntled employee acting maliciously.
@@ -31,7 +32,10 @@ and provide ample opportunity to overcome that feeling. Users who feel
 inconvenienced or patronized are likely to attempt to circumvent
 security measures, so a balance must be found.
 
-3. Remote threat: A threat from outside the organization/network.
+3. Remote threat: A threat from outside the organization/network. Remote
+   threats are likely to leverage whatever vulnerabilities they find,
+including the goodwill and cooperativeness of individuals in the
+organization.
 
 Because we have limited time and resource, although we would ideally
 want to shore up every possible vector, we'll list those most likely to
@@ -39,11 +43,21 @@ least likely.
 
 1. Software intentionally but not maliciously installed by a user on the
    network. This is one of the most common threats, is an internal
-threat caused by installing software not known to be malicious.
- 1. Possibly a trojan of some kind, or otherwise malicious software
-    smuggled in on the back of useful software.
+threat caused by well-meaning but ignorant users.
+
+ 1. Far and away the most likely breed of malware is a trojan of some
+    kind, or otherwise malicious software smuggled in on the back of
+useful software. They initiate on a network primarily through social
+engineering attacks, such as email-attachments. Trojans are often
+deployed with the intention of using them as a backdoor which tries to
+phone home to the attacker or which the attacker can use to log in to
+the machine remotely.  
+
 	- Not totally unlikely that a trojan may have been crafted
-	  specifically for us by a competing organization. 
+	  specifically for us by a competing organization or criminal.
+Attacking by leaving infected Flash-Drives in a parking lot for the
+curious employee to pick up and plug in is not unheard of.
+
 	- Not to overstate the likelyhood of this, merely to clarify:
 	  Some anti-malware organizations refer to carriers of this as
 PUP: Potentially Unwanted Programs. They often take the form of free
@@ -52,7 +66,7 @@ include ads for other, paid programs which may or may not be any good.
 They may serve an actual use: some disk defragmenting programs get
 labeled as this because of the ads.
 
-	  The worst of them are in many ways indistinguishable from true
+	  The worst PUPs are in many ways indistinguishable from true
 malware in that they walk like malware and quack like malware.  They
 typically instill a sense of urgency ("Threats detected on your
 computer!"), and conveniently offer an immediate solution ("Call our
@@ -62,6 +76,14 @@ do much that is actually harmful, unless you consider getting rid of
 foreign language files harmful, but it will continually pester the user
 to buy a license to "protect their machine", while in effect it doesn't
 do any good either.
+
+ 2. By distinction, a virus is usually less stealthy and usually more
+    destructive in behavior, and it typically aims either to disrupt
+operations or make itself known. A virus will usually spread through
+infected files or programs, being attached to some host file, and upon
+running will attempt to infect other host files. This self-replicating
+nature is what makes it a virus, while trojans typically don't attempt
+this self-replicating behavior.
 
 Similar Incidents
 =================
