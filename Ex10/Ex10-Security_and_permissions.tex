@@ -1,0 +1,139 @@
+%&tex
+\documentclass{article}
+
+\usepackage{graphicx}[draft]
+\usepackage{color}
+\graphicspath{{./img/}}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{listings}
+
+\title{Exercise 10 -- Database Security and Permissions}
+\author{Stewart Johnston\\
+  {CIS 150 -- Intro to Database Administration}\\
+  {NCMC}\\
+  {\texttt{johnstons1@student.ncmich.edu}}
+}
+\date{\today}
+
+\begin{document}
+\lstset{language=SQL,
+	basicstyle=\ttfamily,
+	keywordstyle=\color{black}\bfseries\underbar,
+	floatplacement=tbph}
+
+\maketitle
+
+For your convenience, you will find that most numbers are in fact
+hyperlinked references across the document. Likewise, any other URLs
+found, such as links to stackoverflow or docs.microsoft, will be
+hyperlinks. Unfortunately, I've come to find that the syntax
+highlighting that the listings package provides is limited to a smaller
+dielect of SQL than is being used here. T-SQL provides many extensions
+to the language which are not standard, and it is possible that the
+standard which the syntax highlighting is based on an even older dialect
+than the most recent standard. Not every keyword is underlined, which is
+unfortunate, but it still does 99\% of what I want it to do, so I am not
+eager to change anything.
+
+\tableofcontents
+\listoffigures
+
+\section{Create a role and assign permissions}
+See listing \ref{lst:q_1} and accompanying figure \ref{fig:q_1}
+\label{sec:q_1}
+\begin{lstinputlisting}[float, label={lst:q_1}, caption={Per
+	\ref{sec:q_1}}]{src/q_1.sql}
+\end{lstinputlisting}
+\begin{figure}[H]\centering
+	\caption{Per \ref{lst:q_1}}
+	\includegraphics[width=\linewidth]{q_1}
+	\label{fig:q_1}
+\end{figure}
+
+\section{Create RobertHalliday login and user}
+See listing \ref{lst:q_2} and accompanying figure \ref{fig:q_2}
+\label{sec:q_2}
+\begin{lstinputlisting}[float, label={lst:q_2}, caption={Per
+	\ref{sec:q_2}}]{src/q_2.sql}
+\end{lstinputlisting}
+\begin{figure}[H]\centering
+	\caption{Per \ref{lst:q_2}}
+	\includegraphics[width=\linewidth]{q_2}
+	\label{fig:q_2}
+\end{figure}
+
+\section{Dynamically make logins and users}
+The task was to programmatically, rather than statically, create logins
+and users for every person found in the Administrators table, and then
+associate them with the OrderEntry role created in \ref{sec:q_1}.
+See listing \ref{lst:q_3} and accompanying figures \ref{fig:q_3}, \ref{fig:q_3-1}, \ref{fig:q_3-2}
+\label{sec:q_3}
+\begin{lstinputlisting}[label={lst:q_3}, caption={Per
+	\ref{sec:q_3}}]{src/q_3.sql}
+\end{lstinputlisting}
+\begin{figure}[H]\centering
+	\caption{Per \ref{lst:q_3}}
+	\includegraphics[width=\linewidth]{q_3}
+	\label{fig:q_3}
+\end{figure}
+
+\begin{figure}[H]\centering
+	\caption{Per \ref{lst:q_3}}
+	\includegraphics[width=\linewidth]{q_3-1}
+	\label{fig:q_3-1}
+\end{figure}
+
+\begin{figure}[H]\centering
+	\caption{Per \ref{lst:q_3}}
+	\includegraphics[width=\linewidth]{q_3-2}
+	\label{fig:q_3-2}
+\end{figure}
+
+\section{Make a user by hand with the GUI}
+\label{sec:q_4}
+\begin{figure}[H]\centering
+	\caption{Per \ref{sec:q_4}}
+	\includegraphics[width=\linewidth]{q_4}
+	\label{fig:q_4}
+\end{figure}
+\begin{figure}[H]\centering
+	\caption{Per \ref{sec:q_4}}
+	\includegraphics[width=\linewidth]{q_4-1}
+	\label{fig:q_4-1}
+\end{figure}
+\begin{figure}[H]\centering
+	\caption{Per \ref{sec:q_4}}
+	\includegraphics[width=\linewidth]{q_4-2} \label{fig:q_4-2}
+\end{figure}
+
+\section{Remove OrderEntry role}
+Users need to be dropped from the role first
+See listing \ref{lst:q_5} and accompanying figure \ref{fig:q_5}
+\label{sec:q_5}
+\begin{lstinputlisting}[label={lst:q_5}, caption={Per
+	\ref{sec:q_5}}]{src/q_5.sql}
+\end{lstinputlisting}
+\begin{figure}[H]\centering
+	\caption{Per \ref{lst:q_5}}
+	\includegraphics[width=\linewidth]{q_5}
+	\label{fig:q_5}
+\end{figure}
+
+\section{Make Admin schema}
+Also, give Admin schema a table, associate RobertHalliday with it, and
+give Robert basic operator permissions for the schema.
+See listing \ref{lst:q_6} and accompanying figure \ref{fig:q_6}
+\label{sec:q_6}
+\begin{lstinputlisting}[float, label={lst:q_6}, caption={Per
+	\ref{sec:q_6}}]{src/q_6.sql}
+\end{lstinputlisting}
+\begin{figure}[H]\centering
+	\caption{Per \ref{lst:q_6}}
+	\includegraphics[width=\linewidth]{q_6}
+	\label{fig:q_6}
+\end{figure}
+
+\end{document}
