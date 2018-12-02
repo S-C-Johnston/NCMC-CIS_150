@@ -58,25 +58,6 @@ the machine remotely.
 Attacking by leaving infected Flash-Drives in a parking lot for the
 curious employee to pick up and plug in is not unheard of.
 
-	- Not to overstate the likelyhood of this, merely to clarify:
-	  Some anti-malware organizations refer to carriers of this as
-PUP: Potentially Unwanted Programs. They often take the form of free
-programs whose authors want to still make some amount of money, so they
-include ads for other, paid programs which may or may not be any good.
-They may serve an actual use: some disk defragmenting programs get
-labeled as this because of the ads.
-
-	  The worst PUPs are in many ways indistinguishable from true
-malware in that they walk like malware and quack like malware.  They
-typically instill a sense of urgency ("Threats detected on your
-computer!"), and conveniently offer an immediate solution ("Call our
-support team at this number. Install now to fix!"). MacKeeper is an
-example of PUP which is particularly pernicious. On its own it doesn't
-do much that is actually harmful, unless you consider getting rid of
-foreign language files harmful, but it will continually pester the user
-to buy a license to "protect their machine", while in effect it doesn't
-do any good either.
-
  2. By distinction, a virus is usually less stealthy and usually more
     destructive in behavior, and it typically aims either to disrupt
 operations or make itself known. A virus will usually spread through
