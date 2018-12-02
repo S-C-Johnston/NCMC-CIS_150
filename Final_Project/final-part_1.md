@@ -14,3 +14,12 @@ capable of actually executing and exfiltrating data is likely to take
 only a handful of forms. Because we have limited time and resource,
 although we would ideally want to shore up every possible vector, we'll
 list those most likely to least likely.
+
+Similar Incidents
+=================
+
+Potential Impact
+================
+
+Countermeasures
+===============
