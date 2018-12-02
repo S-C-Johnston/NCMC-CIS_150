@@ -58,16 +58,60 @@ the machine remotely.
 Attacking by leaving infected Flash-Drives in a parking lot for the
 curious employee to pick up and plug in is not unheard of.
 
- 2. By distinction, a virus is usually less stealthy and usually more
-    destructive in behavior, and it typically aims either to disrupt
+ 2. By distinction, a virus is usually less stealthy and usually more destructive in behavior, and it typically aims either to disrupt
 operations or make itself known. A virus will usually spread through
 infected files or programs, being attached to some host file, and upon
-running will attempt to infect other host files. This self-replicating
-nature is what makes it a virus, while trojans typically don't attempt
-this self-replicating behavior.
+running will attempt to infect other host files. Although the need to
+ride on the back of something innocent-looking may seem like trojan
+behavior, the viral, self-replicating nature is what makes it a
+virus, while trojans typically don't attempt this self-replicating
+behavior.
+
+2. A remote attacker may have found a vulnerable internet-facing server
+   and through it, pivoted elsewhere. They could leave a rootkit behind,
+allowing them return access. Without interacting with any member of
+staff, they may have been performing reconnaissance for some time. If
+our organization was the subject of corporate espionage, this is not an
+unlikely move.
 
 Similar Incidents
 =================
+Two similar occasions are available to dissect.
+
+##Panic 
+
+The software company [Panic](https://panic.com) suffered theft of their
+source code.  According to their
+[blog](https://panic.com/blog/stolen-source-code/) from one of the
+developers, the thieves delivered their attack by disguising their
+software as a video-codec processing program called Handbrake.
+
+ 1. Handbrake is legitimate software, but for a period of three days it
+    was vulnerable, and during that time the software was "nagging them
+for some time to install an update".
+
+ 2. When the program reported that an incremental update was not
+    available, it prompted for a full download of the next version. The
+developer, just wanting to get on with it, didn't stop to think about
+why Handbrake needed elevated privileges to run, or about how sketchy
+the authentication dialogue seemed at the time.
+
+ 3. Git credentials were stolen and used to clone several repositories
+    of their source code. Panic was lucky in that the attacker did not
+get clones of every repository, largely because the attacker was
+guessing at their repository names.
+
+	- _There is no reason to believe that we are this lucky_.
+
+ 4. They were contacted by the thief to the effect of a ransom. "Pay us
+    or we'll release it into the wild" is an effective summary. There is
+no reason to believe that once paid the thief will keep their promise.
+
+	- These are digital assets which can be copied and redistributed
+	  easily, not a person or physical goods which must be returned.
+
+They came to three conclusions about the likely impact, which will be
+discussed later.
 
 Potential Impact
 ================
