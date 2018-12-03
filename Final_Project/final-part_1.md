@@ -86,29 +86,29 @@ source code.  According to their
 developers, the thieves delivered their attack by disguising their
 software as a video-codec processing program called Handbrake.
 
- 1. Handbrake is legitimate software, but for a period of three days it
-    was vulnerable, and during that time the software was "nagging them
+1. Handbrake is legitimate software, but for a period of three days it
+   was vulnerable, and during that time the software was "nagging them
 for some time to install an update".
 
- 2. When the program reported that an incremental update was not
-    available, it prompted for a full download of the next version. The
+2. When the program reported that an incremental update was not
+   available, it prompted for a full download of the next version. The
 developer, just wanting to get on with it, didn't stop to think about
 why Handbrake needed elevated privileges to run, or about how sketchy
 the authentication dialogue seemed at the time.
 
- 3. Git credentials were stolen and used to clone several repositories
-    of their source code. Panic was lucky in that the attacker did not
-get clones of every repository, largely because the attacker was
-guessing at their repository names.
+3. Git credentials were stolen and used to clone several repositories of
+   their source code. Panic was lucky in that the attacker did not get
+clones of every repository, largely because the attacker was guessing at
+their repository names.
 
-	- _There is no reason to believe that we are this lucky_.
+ - _There is no reason to believe that we are this lucky_.
 
- 4. They were contacted by the thief to the effect of a ransom. "Pay us
-    or we'll release it into the wild" is an effective summary. There is
+4. They were contacted by the thief to the effect of a ransom. "Pay us
+   or we'll release it into the wild" is an effective summary. There is
 no reason to believe that once paid the thief will keep their promise.
 
-	- These are digital assets which can be copied and redistributed
-	  easily, not a person or physical goods which must be returned.
+ - These are digital assets which can be copied and redistributed
+   easily, not a person or physical goods which must be returned.
 
 They came to three conclusions about the likely impact, which will be
 discussed later.
