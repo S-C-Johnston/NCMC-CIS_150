@@ -78,7 +78,7 @@ Similar Incidents
 =================
 Two similar occasions are available to dissect.
 
-##Panic 
+## Panic ##
 
 The software company [Panic](https://panic.com) suffered theft of their
 source code.  According to their
@@ -113,7 +113,7 @@ no reason to believe that once paid the thief will keep their promise.
 They came to three conclusions about the likely impact, which will be
 discussed later.
 
-##Valve Software
+## Valve Software ##
 
 Valve is a games company who suffered
 [theft](https://games.slashdot.org/story/03/10/02/1547218/half-life-2-source-code-leaked)
@@ -215,6 +215,31 @@ email.
 have 2 factor authentication in place for members with higher
 privileges, we should.
 
+- Providing security training on a regular basis would be wise. This can
+  either be done by delivering a series of videos from an outside
+source, or this can be done in-house.
+
+ + Outsourcing the bulk of the work, at least initially, can cut down on
+   the time our staff needs to spend on the topic, especially given that
+we have other security concerns to which we must attend. However, we
+must be careful that our choice of training does not feel patronizing or
+snide.
+
+ + Doing this in-house would take away labor from other fronts, but
+   would allow some benefits. For one, security staff tend to be
+enthusiastic about their topic, and if they can avoid being
+condescending to their peers, they can be very effective in transferring
+that enthusiasm. For another, having a live person allows for questions
+to be asked.
+
+ + Whatever is done, it's important that members are educated on their
+   responsibilities, and that we avoid frustrating or patronizing them.
+Generally, the enthusiasm for security will spike for a while after
+training, and will peter out over time, and some people may not be
+engaged by material which feels remedial. For those reasons it is
+important we choose a method which has some novelty and repeatability,
+and we avoid the feeling of managerial meddling.
+
 - A policy which can help prevent suffering from the hijacking of
   legitimate software is to establish an organization software
 distribution point for our internal users. The IT staff can evaluate
@@ -256,3 +281,8 @@ down may or may not be overkill. Such measures as chipped security
 cards, or other things in the categories of "things your have" or "things
 you are" would probably not go amiss. These generally do not impact
 productivity overly much.
+
+- Careful examination of the structure and security of our
+  internet-facing machines is warranted, here. If anything is found
+wanting, even if it isn't the attack vector our thief used, it would be
+wise to fill the gaps.
