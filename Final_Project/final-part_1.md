@@ -113,6 +113,37 @@ no reason to believe that once paid the thief will keep their promise.
 They came to three conclusions about the likely impact, which will be
 discussed later.
 
+##Valve Software
+
+Valve is a games company who suffered
+[theft](https://games.slashdot.org/story/03/10/02/1547218/half-life-2-source-code-leaked)
+of source code for [Half-Life
+2](https://web.archive.org/web/20040828084259/http://www.halflife2.net:80/forums/showthread.php?s=&threadid=10692).
+At the time of the theft, they had been forced to announce a delay of
+the highly anticipated game. The remote threat was not someone
+interested in monetary game, but a
+[fan](https://arstechnica.com/gaming/2016/06/what-drove-one-half-life-2-super-fan-to-hack-into-valves-servers/)
+who had a history of cracking game licenses. It was shared online by
+someone with whom the thief had shared his discovery. In any case, the
+process involved:
+
+1. The attacker scanned their network, finding vulnerabilities which
+   exposed the layout and topology of the internal network.
+
+2. Mail accounts were accessed by the attacker, in particular the
+   Managing Director's.  Valve came to know this by examining their
+logs.
+
+3. Malware had potentially infected the Managing Director's machine.
+
+4. Source code was copied and exfiltrated. Apparently only the main
+   trunk of the code was grabbed, which was not in itself enough to make
+a playable executable.
+
+5. Keyloggers were installed by exploiting a vulnerability in Outlook.
+   The malware was a customized version of existing software, this fork
+designed to infect Valve.
+
 Potential Impact
 ================
 
