@@ -147,5 +147,112 @@ designed to infect Valve.
 Potential Impact
 ================
 
+From examining similar accounts, there are a handful of things which may
+happen. This list is non-prioritized, since we can't say for sure what
+kind of entity was the origin of this threat, or to which extent
+information and source code was stolen. If we got lucky, then only a
+portion of our code was cloned, but we can't assume this.
+
+- **Cracked versions of our software are released**, in a word:
+  pirating. It is probable this was already happening, to be quite
+honest. If no other damage occurs, this would be a blessing.
+
+- **Malware infected versions of our apps are released**. As the Panic
+  developers noted, if this occurred because of a trojan of legitimate
+software, there is a high risk it opens up our end-users to this same
+kind of attack. We need to take steps to stem the flow and invalidate
+any developer certificates they may have stolen. End-users need to be
+made aware, and if we have any distribution points through
+third-parties, like Apple's App Store, Google Play, or linux community
+package managers, we must double down on working with them to prevent
+unauthorized versions of our software from being released through those
+means.
+
+- **Knowledge of our program structure allows for further theft**,
+  especially concerning if there is any user-data which can be accessed
+by someone who merely knows how we retrieve it. This would likely be the
+most damaging to our operations, our end-users, and our reputation. If
+we can stop this from becoming a user-data breach, then we should do so
+as quickly as possible. Possible steps include:
+
+ + Rotating passwords, certificates, or anything else used to gain
+    access to our data.
+
+ + Migrating our data to different servers entirely.
+
+ + Invalidate the old API for end-users to connect. This will put any
+   users who do not regularly update their installations of our software
+out of service until they do, but that's a small consequence compared to
+user-data theft.
+
+- **Competitors use this information to creep up on our competitive
+  edge**. As Panic software notes, this clone that the attackers have
+will rapidly go out of date as we continue to develop and improve our
+software. A competitive edge is valuable, but if a competitor released
+software with our fingerprints all over it, that would be quite damning.
+This is also one of the less severe consequences we could face, in this
+professional's opinion. If this is all that happens, our best bet is to
+continue our development and release cycle, while dedicating some
+resources to shoring up our leaks and preventing this from happening
+again.
+
 Countermeasures
 ===============
+This list is presented in a very rough order of what is easy, and high
+priority. It remains unnumbered because the priority, ease, and
+efficiency is not set in stone.
+
+- The first and easiest thing we can put in place immediately is to keep
+  our antiviral software up to date and to actually use it frequently.
+Scheduling anti-malware software to run on a daily basis during
+off-hours would be wise. Allowing each person to run anti-malware scans
+on their machine during their lunch break would help catch any threats
+which come in during the morning hours, when many people check their
+email.
+
+- Rotating our current passwords and reviewing our password policy may
+  create some productivity hiccups, but it is necessary. If we don't
+have 2 factor authentication in place for members with higher
+privileges, we should.
+
+- A policy which can help prevent suffering from the hijacking of
+  legitimate software is to establish an organization software
+distribution point for our internal users. The IT staff can evaluate
+software for any problems and deploy updates when they are determined
+safe to use.
+
+ + If this proves to be out of our ability, then if software is not
+   deploying security updates specifically, it would be wise to wait a
+week to see if any nastiness crops up. Most vulnerabilities are
+discovered within a week of a software update which creates the
+vulnerability, and the bleeding edge is sometimes a dangerous place to
+be. Security updates are the only thing which should be rushed.
+
+ + Additionally, it would be wise to practice policy that software
+   installation go through the IT staff. Not all software is something
+we as an organization need or want on our network. This may be
+difficult, but thinking well enough ahead of time to make requests and
+have those requests vetted should be within the capability of a software
+development company.
+
+- Practicing a least-privileges model of security is almost always a
+  wise thing to do. The efficacy of this will depend greatly on our
+making daily operations convenient to do without requiring elevated
+privileges. In effect: make sure every user logs into the network and
+into their own machines with only as many privileges as they need. BYOD
+can make this difficult to implement successfully, but can be done.
+
+- Speaking of Bring Your Own Device: Full-disk encryption on machines
+  which may travel outside our network is a good idea. If someone can
+get physical access to a box, the only way to keep them from owning it
+is to have strong protections on the entirety of its contents, without
+merely relying on the security provided when the OS is loaded.
+
+- Machines storing sensitive information should be kept with both strong
+  physical and digital security measures. Full-disk encryption, as
+mentioned, can do wonders, and we use it under the assumption that
+things will go wrong. For physical security, literally bolting things
+down may or may not be overkill. Such measures as chipped security
+cards, or other things in the categories of "things your have" or "things
+you are" would probably not go amiss. These generally do not impact
+productivity overly much.
