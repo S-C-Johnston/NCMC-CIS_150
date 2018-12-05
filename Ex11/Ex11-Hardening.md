@@ -61,14 +61,24 @@ stack on the same host is wise.
 
 	2. This depends on the availability and difficulty in achieving
 	   this. If favoring named pipes over TCP/IP means changing
-significant chunks of application logic to connect properly, then it's certainly
-not worth the effort for such databases as we've been running. 
+significant chunks of application logic to connect properly, then it's
+certainly not worth the effort for such databases as we've been running. 
 
-6. Question
+6. Keeping anti-malware and firewall software updated and configured
+   correctly
 
-	1. Helpful?
+	1. On its own, keeping firewall and anti-malware software
+	   running smoothly and correctly on any system will be
+tremendously effective in stopping a significant chunk of threats in
+their tracks. Firewall software which is too permissive, or blocks the
+incorrect ports, could prevent organization operations. Anti-malware
+software which is not updated can't catch any recently discovered
+threats.
 
-	2. Should it be used?
+	2. Especially for a small business unlikely to face targeted or
+	   tailored threats, the benefit gained and the relative ease at
+which it is attained moves this into best practice territory, with very
+few exceptions.
 
 7. Question
 
