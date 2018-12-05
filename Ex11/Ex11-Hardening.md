@@ -27,11 +27,16 @@ circumstances. Even if the server it runs on is not on different
 hardware, merely a different virtual machine, that insulation of
 internetworked components is wise.
 
-3. Question
+3. Disable services not expecting immediate use
 
-	1. Helpful?
+	1. This may come with some management overhead, but it is
+	   probable that much of it could be scripted away. This is
+another property which falls out of the first. Keeping both runtime
+hardware requirements and attack surface slim is not bad as long as it
+doesn't interfere with performance.
 
-	2. Should it be used?
+	2. Again, this seems to me like a best practice with few
+	   exceptions.
 
 4. Question
 
