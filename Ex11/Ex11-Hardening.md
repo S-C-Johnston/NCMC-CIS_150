@@ -38,11 +38,20 @@ doesn't interfere with performance.
 	2. Again, this seems to me like a best practice with few
 	   exceptions.
 
-4. Question
+4. Change the default TCP/IP ports
 
-	1. Helpful?
+	1. This may be helpful insofar as preventing vulnerability to
+	   malware which is not particularly smart, likewise malicious
+people who are not particularly smart. That may well be enough to keep
+threats from organization machines from being effective.
 
-	2. Should it be used?
+	2. Of the software means to protect a SQL server, this is likely
+	   one of the weakest. It isn't necessarily a bad thing to do,
+but it remains effective only if the server isn't vulnerable to port
+sniffing. For a low-risk server, changing the defaults may not be worth the
+hassle. The fewer users there are on a network accessing a server from
+organization machines, the less risk there is of malware threatening the
+server.
 
 5. Question
 
