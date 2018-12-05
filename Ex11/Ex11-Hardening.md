@@ -53,11 +53,16 @@ hassle. The fewer users there are on a network accessing a server from
 organization machines, the less risk there is of malware threatening the
 server.
 
-5. Question
+5. Disable the network protocols not required for operation
 
-	1. Helpful?
+	1. Another means of keeping the surface area slim, insulating
+	   the SQL server by running it without any other networking
+stack on the same host is wise.
 
-	2. Should it be used?
+	2. This depends on the availability and difficulty in achieving
+	   this. If favoring named pipes over TCP/IP means changing
+significant chunks of application logic to connect properly, then it's certainly
+not worth the effort for such databases as we've been running. 
 
 6. Question
 
