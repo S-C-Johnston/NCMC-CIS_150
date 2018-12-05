@@ -12,3 +12,71 @@ demands are kept as light as possible.
 	   to Operating System. Stripping out unnecessary modules from
 the Linux kernel and compiling it customized for the target hardware is
 not uncommon.
+
+2. Don't install SQL Server Reporting Services (SSRS) on the same server
+   as the database engine
+
+	1.
+
+	2.
+
+3. Question
+
+	1. Helpful?
+
+	2. Should it be used?
+
+4. Question
+
+	1. Helpful?
+
+	2. Should it be used?
+
+5. Question
+
+	1. Helpful?
+
+	2. Should it be used?
+
+6. Question
+
+	1. Helpful?
+
+	2. Should it be used?
+
+7. Question
+
+	1. Helpful?
+
+	2. Should it be used?
+
+8. Question
+
+	1. Helpful?
+
+	2. Should it be used?
+
+9. Question
+
+	1. Helpful?
+
+	2. Should it be used?
+
+10. Question
+
+	1. Helpful?
+
+	2. Should it be used?
+
+11. Question
+
+	1. Helpful?
+
+	2. Should it be used?
+
+12. Question
+
+	1. Helpful?
+
+	2. Should it be used?
+
