@@ -16,9 +16,16 @@ not uncommon.
 2. Don't install SQL Server Reporting Services (SSRS) on the same server
    as the database engine
 
-	1.
+	1. Server Reporting Services run with internet facing pieces on
+	   top of Microsoft IIS, which has historically not been a
+bulwark of security. Running it on the same server as the DBMS adds
+enormous surface area potentially vulnerable.
 
-	2.
+	2. For the same reasons as the first section, this seems to be a
+	   best practice which would be wise to apply in all
+circumstances. Even if the server it runs on is not on different
+hardware, merely a different virtual machine, that insulation of
+internetworked components is wise.
 
 3. Question
 
