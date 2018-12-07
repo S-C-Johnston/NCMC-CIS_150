@@ -80,11 +80,21 @@ threats.
 which it is attained moves this into best practice territory, with very
 few exceptions.
 
-7. Question
+7. Manage the surface area configurations
 
-	1. Helpful?
+	1. Microsoft in particular often does not have what I perceive
+	   as sane defaults. Using a tool to manage defaults before a
+server is even deployed, and to wrangle the exact policy and
+configuration after deployment is only smart. Being able to touch these
+configurations and following through on that ability is, to my mind, a
+solid chunk of an administrator's role.
 
-	2. Should it be used?
+	2. Many defaults may not require wrangling, especially for
+	   smaller-scale organizations, those with low risk, or those
+without sensitive information. Managing the surface area configurations
+will still inevitably come up. Even if only one policy sees change,
+doing so from one unified tool and tracking the changes is too easy an
+option to ignore.
 
 8. Question
 
