@@ -116,11 +116,16 @@ all Windows users on the network. The only qualm I have with it is that
 Windows Authentication is not particularly difficult to break,
 especially with access to the box. Still, it is a practical choice.
 
-9. Question
+9. Configure administrative accounts
 
-	1. Helpful?
+	1. Removing the builtin administrator accounts and heavily
+	   restricting roles and permissions will go a long way to
+preventing privilege escalation and unauthorized tampering.
 
-	2. Should it be used?
+	2. Again, the security is only as strong as the weakest link.
+	   Securing the server on which the DBMS runs is as important,
+if not more, than securing the DBMS itself. This should be fairly trivial
+to put in place, and seems to me an obvious best practice.
 
 10. Question
 
