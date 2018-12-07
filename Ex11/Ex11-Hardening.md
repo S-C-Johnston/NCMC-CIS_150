@@ -144,11 +144,21 @@ trivial to implement. For increasingly sensitive data, this is
 increasingly necessary. Except for the forethought in configuring it, I
 can see no reason not to implement this.
 
-11. Question
+11. Creating security groups
 
-	1. Helpful?
+	1. Applying roles and permissions to domain security groups
+	   makes administration of larger networks significantly easier.
+Rather than handling an increasing number of individual members at the
+DBMS level, handling the abstract security groups makes management
+significantly less granular at the DBMS.
 
-	2. Should it be used?
+	2. For fewer than a dozen users, this is probably excessive
+	   extra work to implement this. Such small organizations as
+would be using the MyGuitarShop database would require so little
+overhead to just handle individual users, that adding the overhead of
+this abstraction doesn't make sense. Only if a small business were
+expecting significant growth would this abstraction be worth setting up
+at this scale.
 
 12. Question
 
