@@ -94,13 +94,27 @@ solid chunk of an administrator's role.
 without sensitive information. Managing the surface area configurations
 will still inevitably come up. Even if only one policy sees change,
 doing so from one unified tool and tracking the changes is too easy an
-option to ignore.
+option to ignore. 
 
-8. Question
+8. Configuring authentication
 
-	1. Helpful?
+	1. The recommended course of action is to use Windows
+	   Authentication only, whenever possible. In a homogenous
+environment, this helps reduce moving parts and points of ingress. MS
+SQL Server makes it trivial to introduce new logins based on Windows
+Authentication, which is convenient. If the DBA is not wearing an
+excessive number of hats, such as also being the SysAdmin for the
+network, this can help offload the work of security. This comes with the
+trade of having to trust the SysAdmin to have strong security policy.
+The security is only as strong as the weakest link, after all.
 
-	2. Should it be used?
+	2. For a small business, it is likely that the DBA is also the
+	   SysAdmin, and moving the security responsibility from the
+DBMS to the OS does not also move it outside of the DBA's influence.
+There isn't a compelling logistical reason not to use Windows Authentication for
+all Windows users on the network. The only qualm I have with it is that
+Windows Authentication is not particularly difficult to break,
+especially with access to the box. Still, it is a practical choice.
 
 9. Question
 
