@@ -160,9 +160,17 @@ this abstraction doesn't make sense. Only if a small business were
 expecting significant growth would this abstraction be worth setting up
 at this scale.
 
-12. Question
+12. Schema and object ownership
 
-	1. Helpful?
+	1. Granting ownership in wanton fashion is unwise. The dbo
+	   schema is so wide-reaching that no individual user should be
+mapped to own it, and when they do need to own something, allocating
+schemas is fairly trivial. Keeping those schemas on a per-database
+level, rather than allowing them to chain, will help prevent
+unauthorized (if unintentional) access to data.
 
-	2. Should it be used?
+	2. Working with schemas is trivial to implement on the DBMS
+	   level, and there is no compelling reason not to adhere to
+this advice. This is a best practice with few exceptions, as far as I
+can tell.
 
