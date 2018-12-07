@@ -127,11 +127,22 @@ preventing privilege escalation and unauthorized tampering.
 if not more, than securing the DBMS itself. This should be fairly trivial
 to put in place, and seems to me an obvious best practice.
 
-10. Question
+10. Provision service accounts using non-user accounts which are not
+    built-in
 
-	1. Helpful?
+	1. User accounts have permissions on many machines, which makes
+	   them a more vulnerable vector for attack, so non-user
+accounts are best. Built-in accounts inherit some permissions from the
+defaults. Using custom non-user accounts is wise in combination with the
+principle of least privilege, and the separation of duties. Splitting up
+administration over multiple components of a hardware network is
+recommended for similar reasons.
 
-	2. Should it be used?
+	2. This is mildly finicky, but for a small business, the small
+	   number of moving parts makes this kind of hardening practice
+trivial to implement. For increasingly sensitive data, this is
+increasingly necessary. Except for the forethought in configuring it, I
+can see no reason not to implement this.
 
 11. Question
 
