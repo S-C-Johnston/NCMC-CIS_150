@@ -67,6 +67,14 @@ database's information, reporting services, and other internet facing
 components should all be installed and run from separate machines,
 virtual or otherwise.
 
+- SQL injection is usually an issue handled outside of the server's
+  components, in the back end which receives user input. If all goes
+well, then all input should be sanitized and validated. Programmers
+being people, they are forgetful and make mistakes. This the case, all
+webapp facing procedures should use SQL mechanisms to quote input to
+remove its danger. QUOTENAME() is one such function, although its return
+type is limited.
+
 Backup and Compress AdventureWorks
 ----------------------------------
 
