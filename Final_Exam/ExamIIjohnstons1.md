@@ -30,7 +30,7 @@ to store the database. These can then be copied and brought back online.
 	  file which can be copied, and the logs of actions performed on
 the database. The file can be brought back online, and an arbitrary
 selection of logs can be replayed on top of that file in chronological
-order. This is useful if there was some descructive action performed,
+order. This is useful if there was some destructive action performed,
 and the database needed to be rewound to just before this happened.
 
 4. If and only if fault tolerance is not a requirement, RAID 0 -- which
@@ -86,10 +86,10 @@ Backup of Six High-Load DBs
 Given the availability requirements and the low number of modifications
 each day, instead of creating full backups each night, I would instead:
 
-1. Create a full backup on the weekend, likely sunday. SQL Server
+1. Create a full backup on the weekend, likely Sunday. SQL Server
    provides this functionality through a command.
 
-2. Each day of the week until the next sunday, after the high load slows
+2. Each day of the week until the next Sunday, after the high load slows
    down, create a differential backup. This functionality is also
 provided through SQL Server commands
 
