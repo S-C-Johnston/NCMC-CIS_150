@@ -15,3 +15,20 @@ permissions can be assigned for them such that users can't access the
 underlying data, and because they can represent arbitrary combinations
 of fields to fit the DBA's -- or organization's -- needs, omitting any
 information which is deemed sensitive or irrelevant to the view.
+
+3. Database recovery methods include:
+
+	- Database dumping, using tools or commands built into the DBMS
+	  to create a SQL script. Running this script will recreate both
+the schema definitions and the data in the DBMS.
+
+	- Filesystem level backups, which require bringing the database
+	  offline while archives can be made of the files the DBMS uses
+to store the database. These can then be copied and brought back online.
+
+	- Transaction or log-based backups. These use a combination of a
+	  file which can be copied, and the logs of actions performed on
+the database. The file can be brought back online, and an arbitrary
+selection of logs can be replayed on top of that file in chronological
+order. This is useful if there was some descructive action performed,
+and the database needed to be rewound to just before this happened.
