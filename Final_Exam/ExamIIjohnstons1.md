@@ -81,6 +81,20 @@ Backup and Compress AdventureWorks
 Backup of Six High-Load DBs
 ---------------------------
 
+Given the availability requirements and the low number of modifications
+each day, instead of creating full backups each night, I would instead:
+
+1. Create a full backup on the weekend, likely sunday. SQL Server
+   provides this functionality through a command.
+
+2. Each day of the week until the next sunday, after the high load slows
+   down, create a differential backup. This functionality is also
+provided through SQL Server commands
+
+3. Repeat this process weekly. This can be automated with the use of the
+   SQL Server Agent component, or using some OS feature to automate
+this, such as cron in Linux.
+
 Backup AdventureWorks external drive for maintenance
 ----------------------------------------------------
 
