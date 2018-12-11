@@ -38,3 +38,24 @@ and the database needed to be rewound to just before this happened.
 reading and writing of data. It requires only two disks to implement,
 the minimum size for any RAID set, but it is a fragile structure.
 Failure in either disk would make all data unrecoverable.
+
+Longform questions
+==================
+
+Security Weaknesses
+-------------------
+
+Backup and Compress
+-------------------
+
+Backup of Six High-Load DBs
+---------------------------
+
+Backup to external drive for maintenance
+----------------------------------------
+
+Recover from backup
+-------------------
+
+Disaster Recovery site in the cloud
+-----------------------------------
