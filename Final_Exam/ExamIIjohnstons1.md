@@ -45,17 +45,17 @@ Longform questions
 Security Weaknesses
 -------------------
 
-Backup and Compress
--------------------
+Backup and Compress AdventureWorks
+----------------------------------
 
 Backup of Six High-Load DBs
 ---------------------------
 
-Backup to external drive for maintenance
-----------------------------------------
+Backup AdventureWorks external drive for maintenance
+----------------------------------------------------
 
-Recover from backup
--------------------
+Recover AdventureWorks from backup
+----------------------------------
 
 Disaster Recovery site in the cloud
 -----------------------------------
