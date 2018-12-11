@@ -105,3 +105,32 @@ Recover AdventureWorks from backup
 
 Disaster Recovery site in the cloud
 -----------------------------------
+
+Best practices for backups of any kind are to have multiple physical
+locations where data is stored, both an on-site backup and an off-site
+backup. Contracting another nearby company to handle physically
+redundant backups would be a lengthy and costly process, not to mention
+the installation of equipment to make a space a competent warm or hot
+site. Then of course there are physical security needs to be handled.
+Using one of a number of secure cloud hosts, such as through Amazon's
+Web Services or Microsoft's cloud platform, we can ensure the
+confidentiality, integrity, and availability of our data and operations
+at relatively low cost.
+
+Cloud service providers generally have very scalable pricing models,
+such that unused space and time is not charged for. There is of course
+still a charge for idle use and disk storage, but this would be much
+lower than the idle cost of a physically redundant site. Configuration
+is fast, inexpensive, and easy for most common technology stacks. The
+only real bottleneck by comparison is the time to send data over the
+wire to the cloud service provider's servers we rent.
+
+Hosting a DR site in the cloud several other benefits not limited to:
+
+- Far-flung remote sites are unlikely to be affected by power outages or
+  dangerous weather we may experience locally.
+
+- Duplicating our DR site across availability zones is trivial.
+
+- The service provider already has security procedures in place, both
+  physical and digital.
