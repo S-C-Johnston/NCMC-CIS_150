@@ -32,3 +32,9 @@ the database. The file can be brought back online, and an arbitrary
 selection of logs can be replayed on top of that file in chronological
 order. This is useful if there was some descructive action performed,
 and the database needed to be rewound to just before this happened.
+
+4. If and only if fault tolerance is not a requirement, RAID 0 -- which
+   entails striping data across disks -- makes for very fast parallel
+reading and writing of data. It requires only two disks to implement,
+the minimum size for any RAID set, but it is a fragile structure.
+Failure in either disk would make all data unrecoverable.
