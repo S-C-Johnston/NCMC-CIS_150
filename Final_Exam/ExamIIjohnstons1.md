@@ -60,6 +60,13 @@ same breath, the default access controls for new users and logins is
 quite permissive, and those defaults should be changed as soon as
 possible.
 
+- Many components which serve a real use for SQL Server are also tainted
+  with a history of being vulnerable. Services which live on the IIS
+webserver platform are chief among these. The webapps which use the
+database's information, reporting services, and other internet facing
+components should all be installed and run from separate machines,
+virtual or otherwise.
+
 Backup and Compress AdventureWorks
 ----------------------------------
 
