@@ -105,6 +105,8 @@ Include images q\_2-1 through q\_2-7
 Recover AdventureWorks from backup
 ----------------------------------
 
+Include images q\_3-1 through q\_3-5
+
 Disaster Recovery site in the cloud
 -----------------------------------
 
