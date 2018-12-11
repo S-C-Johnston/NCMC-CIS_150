@@ -100,6 +100,8 @@ this, such as cron in Linux.
 Backup AdventureWorks external drive for maintenance
 ----------------------------------------------------
 
+Include images q\_2-1 through q\_2-7
+
 Recover AdventureWorks from backup
 ----------------------------------
 
