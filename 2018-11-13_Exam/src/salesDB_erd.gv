@@ -1,0 +1,35 @@
+strict digraph ERD {
+	node [shape=none,margin=0];
+	Sales [label=<<TABLE>
+		<TR> <TD>Sales</TD> </TR>
+		<TR> <TD>PK_SalesID</TD> </TR>
+		<TR> <TD PORT="FK_SalesPersonID">SalesPersonID</TD> </TR>
+		<TR> <TD PORT="FK_CustomerID">CustomerID</TD> </TR>
+		<TR> <TD PORT="FK_ProductID">ProductID</TD> </TR>
+		<TR> <TD>Quantity</TD> </TR>
+		</TABLE>>];
+	Customers [label=<<TABLE>
+		<TR> <TD>Customers</TD> </TR>
+		<TR> <TD PORT="PK_CustomerID">PK_CustomerID</TD> </TR>
+		<TR> <TD>FirstName</TD> </TR>
+		<TR> <TD>MiddleInitial</TD> </TR>
+		<TR> <TD>LastName</TD> </TR>
+		</TABLE>>];
+	Products [label=<<TABLE>
+		<TR> <TD>Products</TD> </TR> 
+		<TR> <TD PORT="PK_ProductID">PK_ProductID</TD> </TR>
+		<TR> <TD>Name</TD> </TR>
+		<TR> <TD>Price</TD> </TR>
+		</TABLE>>];
+	Employees [label=<<TABLE>
+		<TR> <TD>Employees</TD> </TR>
+		<TR> <TD PORT="PK_EmployeeID">PK_EmployeeID</TD> </TR>
+		<TR> <TD>FirstName</TD> </TR>
+		<TR> <TD>MiddleInitial</TD> </TR>
+		<TR> <TD>LastName</TD> </TR>
+		</TABLE>>];
+
+	Employees:PK_EmployeeID -> Sales:FK_SalesPersonID [arrowhead = "crow"];
+	Customers:PK_CustomerID -> Sales:FK_CustomerID [arrowhead = "crow"];
+	Products:PK_ProductID -> Sales:FK_ProductID [arrowhead = "crow"];
+}
