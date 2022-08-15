@@ -1,0 +1,35 @@
+%&tex
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{color}
+\graphicspath{{./img/}}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{listings}
+
+\title{Final Exam}
+\author{Stewart Johnston\\
+  {CIS 150 -- Intro to Database Administration}\\
+  {NCMC}\\
+  {\texttt{johnstons1@student.ncmich.edu}}
+}
+\date{\today}
+
+\begin{document}
+
+\lstset{language=SQL,
+	basicstyle=\ttfamily,
+	keywordstyle=\color{black}\bfseries\underbar,
+	floatplacement=tbph}
+
+\maketitle
+
+\tableofcontents
+\listoffigures
+
+\input{ExamIIjohnstons1.tex}
+
+\end{document}
